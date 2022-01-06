@@ -22,7 +22,7 @@
        <h1 class="title">Introduce tu nombre:</h1>
         <input id="nameInput"/>
         <button id="nameButton">Ver Regalos</button>
-        <h2 id="regalos">...</h2>
+        <h1 id="regalos">...</h1>
         <div>
             <button id="regalo1">Abrir regalo 1</button>
             <button id="regalo2">Abrir regalo 2</button>
@@ -41,7 +41,7 @@
         regalo1.style.display = 'none';
         regalo2.style.display = 'none';
         document.getElementById('nameButton').onclick = () => {
-            if (nameInput.value.toUpperCase() === 'tititi') {
+            if (nameInput.value.toUpperCase() === 'TITITI') {
                 regalos.innerText = 'Bien! ya puedes abrir tus regalos';
                 regalo1.style.display = 'inline';
                 regalo2.style.display = 'inline';
@@ -95,8 +95,12 @@
             text-transform: uppercase;
             padding: 0.1rem;
             border-radius: 5px;
-            font-size: 0.75em;
+            font-size: 1em;
             padding: 0.25em 1em;
+            margin-top: 1rem;
+        }
+        input {
+            font-size: 1em;
         }
         .main {
             margin: 3rem 0;
