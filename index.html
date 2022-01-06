@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Waterfall&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img src="./assets/ReyesMagos.png" width="250"/>
+        <h1  class="main">Querida Cristina,<br>como este año te has portado bien hemos decidido hacerte una visita.
+            Dado el año en el que vivimos, los Reyes Magos también nos hemos modernizado y aprovechamos
+            las bondades que trae la tecnología. Es por ello que te traemos tus regalos en forma digital.
+            Esperamos que los disfrutes y que sigas siendo tan buena. Atentamente,<br>Sus Majestades Los Reyes
+            Magos.
+        </h1>
+       <h1 class="title">Introduce tu nombre:</h1>
+        <input id="nameInput"/>
+        <button id="nameButton">Ver Regalos</button>
+        <h2 id="regalos">...</h2>
+        <div>
+            <button id="regalo1">Abrir regalo 1</button>
+            <button id="regalo2">Abrir regalo 2</button>
+        </div>
+        <iframe id="regalo" src="" frameBorder="0"></iframe>
+    </body>
+    <div class="footer">
+        <img src="./assets/reyesMagosFooter.png" width="50"/>
+    </div>
+    <script>
+        const nameInput = document.getElementById('nameInput');
+        const regalo = document.getElementById('regalo');
+        const regalos = document.getElementById('regalos');
+        const regalo1 = document.getElementById('regalo1');
+        const regalo2 = document.getElementById('regalo2');
+        regalo1.style.display = 'none';
+        regalo2.style.display = 'none';
+        document.getElementById('nameButton').onclick = () => {
+            if (nameInput.value === 'tititi') {
+                regalos.innerText = 'Bien! ya puedes abrir tus regalos';
+                regalo1.style.display = 'inline';
+                regalo2.style.display = 'inline';
+            } else {
+                regalos.innerText = 'Vaya, no te llamas así, prueba con otro...';
+                regalo.style.display = 'none';
+                regalo1.style.display = 'none';
+                regalo2.style.display = 'none';
+            }
+        }
+
+        regalo1.onclick = () => {
+            regalo.style.display = 'inline';
+            regalo.src = './regalo1.html';
+        }
+
+        regalo2.onclick = () => {
+            regalo.style.display = 'inline';
+            regalo.src = './regalo2.html';
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Waterfall', cursive;
+            margin: 0 2rem;
+            background-color: aliceblue;
+            color:lightslategray;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1rem;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
+        div {
+            margin-bottom: 2rem;
+        }
+        iframe {
+            display: none;
+            border-radius: 5px;
+            background-color: antiquewhite;
+            height: 30rem;
+        }
+        button {
+            border: none;
+            background-color:darkseagreen;
+            color:white;
+            text-transform: uppercase;
+            padding: 0.1rem;
+            border-radius: 5px;
+            font-size: 0.75em;
+            padding: 0.25em 1em;
+        }
+        .main {
+            margin: 3rem 0;
+        }
+
+        .title {
+            margin-bottom: 0;
+        }
+        .footer {
+            opacity: 0.2;
+        }
+    </style>
+</html>

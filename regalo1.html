@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Waterfall&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <img src="./assets/present.png" width="50"/>
+        <h2>¿Cuál es la montaña rusa preferida de ratonsiti?</h2>
+        <input id="respuesta"/>
+        <button id="respuestaButton">Desenvolver</button>
+        <div id="resultado"></div>
+    </body>
+    <script>
+        const respuesta = document.getElementById('respuesta');
+        const resultado = document.getElementById('resultado');
+        document.getElementById('respuestaButton').onclick = () => {
+            if (respuesta.value.toUpperCase() === 'MAGNUS COLOSSUS') {
+                resultado.innerHTML = '<p>Bien!! Aquí tienes tu primer regalo!\n'
+                                    + 'Un vale para volver a Port Aventura para'
+                                    + ' dos personas!!! Intenta no vomitar antes'
+                                    + ' del viaje ;) (Las entradas se sacarán cuando'
+                                    + ' empiece la nueva temporada)</p>'
+                                    + '<img src="./assets/roallerCoaster.jpg" width="250"/>'
+            } else {
+                resultado.innerHTML = '<p>Frio frio, es algo más bien colosal...</p>'
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Waterfall', cursive;
+        }
+        h2 {
+            margin: 0;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        button {
+            border: none;
+            background-color:firebrick;
+            color:white;
+            text-transform: uppercase;
+            padding: 0.1rem;
+            border-radius: 5px;
+            font-size: 0.75em;
+            padding: 0.25em 1em;
+        }
+    </style>
+</html>
