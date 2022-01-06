@@ -41,7 +41,7 @@
         regalo1.style.display = 'none';
         regalo2.style.display = 'none';
         document.getElementById('nameButton').onclick = () => {
-            if (nameInput.value === 'tititi') {
+            if (nameInput.value.toUpperCase() === 'tititi') {
                 regalos.innerText = 'Bien! ya puedes abrir tus regalos';
                 regalo1.style.display = 'inline';
                 regalo2.style.display = 'inline';
